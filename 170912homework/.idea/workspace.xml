@@ -42,20 +42,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homework-6&amp;7.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="homework-6&amp;7.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/homework-6&amp;7.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            <state relative-caret-position="456">
+              <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homework-3min.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="homework-3min.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homework-3min.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="717">
+            <state relative-caret-position="1368">
               <caret line="72" column="7" lean-forward="false" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
               <folding />
             </state>
@@ -81,6 +81,7 @@
         <option value="$PROJECT_DIR$/homework-5.html" />
         <option value="$PROJECT_DIR$/homework-6.html" />
         <option value="$PROJECT_DIR$/homework-3min.html" />
+        <option value="$PROJECT_DIR$/homework-6&amp;7.html" />
       </list>
     </option>
   </component>
@@ -227,12 +228,12 @@
       <option name="presentableId" value="Default" />
       <updated>1505202767524</updated>
       <workItem from="1505202768822" duration="6166000" />
-      <workItem from="1505209519746" duration="23000" />
+      <workItem from="1505209519746" duration="457000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6189000" />
+    <option name="totallyTimeSpent" value="6623000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="603" y="23" width="823" height="877" extended-state="0" />
@@ -324,18 +325,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homework-6&amp;7.html">
+    <entry file="file://$PROJECT_DIR$/homework-3min.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        <state relative-caret-position="1368">
+          <caret line="72" column="7" lean-forward="false" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homework-3min.html">
+    <entry file="file://$PROJECT_DIR$/homework-6&amp;7.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="72" column="7" lean-forward="false" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
+        <state relative-caret-position="456">
+          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding />
         </state>
       </provider>
