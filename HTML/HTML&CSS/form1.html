@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul#f1{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+        li#f1{
+            float: left;
+        }
+        li a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+        li a:hover{
+            background-color: #111111;
+        }
+    </style>
+</head>
+<body>
+<form action="action_page,php">
+    First name:<br>
+    <input type="text" name="firstname" value="Mickey">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<h2>A Nested List</h2>
+<ul>
+    <li>Coffee</li>
+    <li>Tea
+        <ul>
+            <li>Black tea</li>
+            <li>Green tea</li>
+        </ul>
+    </li>
+    <li>Milk</li>
+</ul>
+
+<ul id="f1">
+    <li id="f1"><a href="#home">Home</a> </li>
+    <li id="f1"><a href="#news">News</a> </li>
+    <li id="f1"><a href="#contact">Contact</a> </li>
+    <li id="f1"><a href="about">About</a> </li>
+</ul>
+</body>
+</html>
