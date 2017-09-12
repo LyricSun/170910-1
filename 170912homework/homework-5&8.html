@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div{
+            display: inline-block;
+            box-sizing: border-box;
+            border: solid 1px black;
+        }
+        .szkg{
+            width: 200px;
+            height: 100px;
+            float: left;
+        }
+        .bszkg1{
+            float: left;
+        }
+        .bszkg2{
+            float: left;
+            font-size: 70px;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .div1{
+            background-color: red;
+        }
+        .div2{
+            background-color: green;
+        }
+        .div3{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="clearfix">
+    <h3>设置了宽高</h3>
+    <div class="div szkg div1"></div>
+    <div class="div szkg div2"></div>
+    <div class="div szkg div3"></div>
+</div>
+<br>
+<div class="clearfix">
+    <h3>被较小的内容撑开一点点</h3>
+    <div class="div bszkg1 div1">红</div>
+    <div class="div bszkg1 div2">绿</div>
+    <div class="div bszkg1 div3">蓝</div>
+</div>
+<br>
+<div class="clearfix">
+    <h3>被较大的内容撑开很多</h3>
+    <div class="div bszkg2 div1">红</div>
+    <div class="div bszkg2 div2">绿</div>
+    <div class="div bszkg2 div3">蓝</div>
+</div>
+</body>
+</html>
