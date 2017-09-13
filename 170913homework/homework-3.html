@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 100%;
+        }
+        table,th,td{
+            border: solid black 1px;
+            border-collapse: collapse;
+        }
+        th,td{
+            padding: 5px;
+        }
+        th,td#t01{
+            padding: 5px;
+            text-align: center;
+        }
+        table#t01 tr:nth-child(even){
+            background-color: #eeeeee;
+        }
+        table#t01 tr:nth-child(odd){
+            background-color: white;
+        }
+        table#t01 th{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h2>文本未居中的表</h2>
+<table>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>80</td>
+    </tr>
+</table>
+<br>
+<h2>文本居中的表</h2>
+<table id="t01">
+    <tr>
+        <th id="t01">Firstname</th>
+        <th id="t01">Lastname</th>
+        <th id="t01">Age</th>
+    </tr>
+    <tr>
+        <td id="t01">Jill</td>
+        <td id="t01">Smith</td>
+        <td id="t01">50</td>
+    </tr>
+    <tr>
+        <td id="t01">Eve</td>
+        <td id="t01">Jackson</td>
+        <td id="t01">94</td>
+    </tr>
+    <tr>
+        <td id="t01">John</td>
+        <td id="t01">Doe</td>
+        <td id="t01">80</td>
+    </tr>
+</table>
+</body>
+</html>
