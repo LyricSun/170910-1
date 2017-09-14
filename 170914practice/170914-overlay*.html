@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .daxiao{
+            width: 400px;
+            height: 300px;
+        }
+        .out{
+            position: relative;
+        }
+
+
+
+        .in{
+            display: block;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+        .overlay{
+            width:0;
+            background-color: dodgerblue;
+            text-align: center;
+            transition: 1s;
+            position: absolute;
+            line-height: 300px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .out:hover .overlay{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="daxiao out">
+    <img src="longmao.png" class="daxiao in">
+    <div class="overlay"><p>龙猫</p></div>
+</div>
+</body>
+</html>
