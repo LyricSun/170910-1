@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .list_head{
+            width: 100%;
+            background-color: #f44336;
+            padding: 30px 40px;
+        }
+        .list_head_ShuRu{
+            border: none;
+            width: 80%;
+            padding: 10px;
+            float: left;
+            font-size: 16px;
+            outline: none;
+        }
+        .list_head_btn{
+            padding: 8px;
+            width: 20%;
+            background: #d9d9d9;
+            color: #555;
+            float: left;
+            outline: none;
+            text-align: center;
+            font-size: 16px;
+            transition: 0.3s;
+            border: none;
+        }
+        .list_head_btn:hover{
+            background-color: #bbbbbb;
+        }
+        .list_body_item{
+            width: 100%;
+            background-color: #fbfbfb;
+            border-bottom: solid 1px #dddddd;
+        }
+        .clear::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .list_body_item_content{
+            width: 90%;
+            padding: 12px 80px;
+            text-align: left;
+            color: black;
+            float: left;
+        }
+        .list_body_item_closebtn{
+            width: 10%;
+            padding: 12px;
+            color: black;
+            float: left;
+            border: none;
+            font-size: 16px;
+            text-align: center;
+        }
+        div.list_body_item:hover div{
+            background-color: #eeeeee;
+            cursor: pointer;
+        }
+        div.list_body_item:hover div.list_body_item_closebtn:hover{
+            background-color: #f44336;
+            color: white;
+        }
+        div.list_body_item.checked:hover div{
+            background-color: #d9d9d9;
+        }
+        div.list_body_item.checked:hover div.list_body_item_closebtn:hover{
+            background-color: #d9d9d9;
+            color: black;
+        }
+        .checked{
+            background: #d9d9d9;
+            color: #fff;
+
+        }
+        .checked span{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+<div class="list_head clear">
+    <h2 style="color: white;text-align: center">My To Do List</h2>
+    <input class="list_head_ShuRu" type="text" placeholder="请输入要添加的项目名">
+    <button class="list_head_btn">添加</button>
+</div>
+<div class="list_body_item clear">
+    <div class="list_body_item_content"><span>吃饭</span></div>
+    <div class="list_body_item_closebtn">×</div>
+</div>
+<div class="list_body_item clear">
+    <div class="list_body_item_content"><span>睡觉</span></div>
+    <div class="list_body_item_closebtn">×</div>
+</div>
+<div class="list_body_item clear checked">
+    <div class="list_body_item_content"><span>打游戏</span></div>
+    <div class="list_body_item_closebtn">×</div>
+</div>
+<div class="list_body_item clear">
+    <div class="list_body_item_content"><span>看电影</span></div>
+    <div class="list_body_item_closebtn">×</div>
+</div>
+
+<script>
+
+
+    var add_ev_arr = document.getElementsByClassName('list_head_btn');
+    var add_ev = add_ev_arr[0];
+
+    add_ev.onclick = function () {
+        var add_arr = document.getElementsByClassName('list_head_ShuRu');
+
+        var new_ele_p = document.createElement('div');
+        new_ele_p.className = 'list_body_item clear';
+
+        var new_ele_c1 = document.createElement('div');
+        new_ele_c1.className = 'list_body_item_content';
+        var nei_rong = document.createElement('span');
+        nei_rong.innerHTML = add_arr[0].value;
+
+
+        var new_ele_c2 = document.createElement('div');
+        new_ele_c2.className = 'list_body_item_closebtn';
+        new_ele_c2.innerHTML = '×';
+        new_ele_c2.addEventListener('click', function () {
+            document.body.removeChild(this.parentElement);
+        }, false);
+
+        new_ele_c1.appendChild(nei_rong);
+        new_ele_p.appendChild(new_ele_c1);
+        new_ele_p.appendChild(new_ele_c2);
+        document.body.appendChild(new_ele_p);
+
+    };
+
+
+
+
+    var del_arr = document.getElementsByClassName('list_body_item_closebtn');
+    for (var i = 0;i < del_arr.length; i++) {
+
+        del_arr[i].onclick = function () {
+            document.body.removeChild(this.parentElement);
+        }
+    }
+
+
+
+    var add_sytle = document.querySelectorAll('.list_body_item');
+
+    for (var j = 0;j < add_sytle.length; j++){
+
+        add_sytle[j].onclick = function () {
+
+            if(this.className === 'list_body_item clear'){
+                this.classList.add('checked');
+            }
+
+            else if (this.className === 'list_body_item clear checked'){
+                this.classList.remove('checked');
+            }
+//
+//            if(this.classList.contains('checked') === false){
+//                this.classList.add('checked');
+//            }
+//
+//
+//            if(this.classList.contains('checked') === true){
+//                this.classList.remove('checked');
+//            }
+        }
+    }
+
+</script>
+</body>
+</html>

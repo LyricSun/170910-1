@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .out{
+            width: 300px;
+            height: 300px;
+            background-color: darkblue;
+        }
+        .mid{
+            width: 200px;
+            height: 200px;
+            background-color: mediumblue;
+        }
+        .in{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="out">
+    <div class="mid">
+        <div class="in">
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var outdiv = document.getElementsByClassName('out')[0];
+    var middiv = document.getElementsByClassName('mid')[0];
+    var indiv  = document.getElementsByClassName('in')[0];
+
+//    outdiv.onclick = function (ev) {
+//        console.log('out');
+//        console.log(ev);
+//    }
+//
+//    middiv.onclick = function () {
+//        console.log('mid');
+//    }
+//
+//    indiv.onclick  = function () {
+//        console.log('in');
+//    }
+
+    outdiv.addEventListener('click',function () {
+        console.log('out');
+    },true);
+
+    middiv.addEventListener('click',function () {
+        console.log('mid');
+    },true);
+
+    indiv.addEventListener('click',function () {
+        console.log('in');
+        this.style.backgroundColor = 'red';
+    },true);
+
+    indiv.removeEventListener('click',function () {
+
+    },true);
+
+</script>
+</body>
+</html>

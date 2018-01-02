@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #myProgress{
+            width: 100%;
+            background-color: #dddddd;
+        }
+        #myBar{
+            width: 0;
+            height: 30px;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div id="myProgress">
+    <div id="myBar">0%</div>
+</div>
+<br>
+<button onclick="move()">Click Me</button>
+<script>
+    function move() {
+        var ele=document.getElementById('myBar');
+        var width=0;
+        var id=setInterval(frame,18);
+        function frame() {
+            if (width<100){
+                width++;
+                ele.style.width=width+'%';
+                ele.innerHTML=width+'%';
+            }
+            else {
+                clearInterval(id);
+            }
+        }
+    }
+</script>
+
+<!--<script>-->
+    <!--function move() {-->
+        <!--var ele=document.getElementById('myBar');-->
+        <!--var width=10;-->
+        <!--var id=setInterval(frame,10);-->
+        <!--function frame() {-->
+            <!--if (width>=100){-->
+                <!--clearInterval(id);-->
+            <!--}-->
+            <!--else {-->
+                <!--width++;-->
+                <!--ele.style.width=width+'%';-->
+                <!--ele.innerHTML=width+'%';-->
+            <!--}-->
+        <!--}-->
+    <!--}-->
+<!--</script>-->
+
+<!--<script>-->
+    <!--function move() {-->
+        <!--var ele=document.getElementById('myBar');-->
+        <!--var width=10;-->
+        <!--var id=setInterval(frame,10);-->
+        <!--function frame() {-->
+            <!--if(width>=100){-->
+                <!--clearInterval(id);-->
+            <!--}-->
+            <!--else {-->
+                <!--width++;-->
+                <!--ele.style.width=width+'%';-->
+                <!--ele.innerHTML=width+'$';-->
+            <!--}-->
+        <!--}-->
+    <!--}-->
+<!--</script>-->
+</body>
+</html>

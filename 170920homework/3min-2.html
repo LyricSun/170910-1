@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #out{
+            width: 100%;
+            background-color: #dddddd;
+        }
+        #in{
+            width: 0;
+            background-color: #4caf50;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div id="out">
+    <div id="in">0%</div>
+</div>
+<button onclick="move()">Click</button>
+<script>
+    function move() {
+        var ele=document.getElementById('in');
+        var width=0;
+        var id=setInterval(frame,18);
+        function frame() {
+            if(width<100){
+                width++;
+                ele.style.width=width+'%';
+                ele.innerHTML=width+'%';
+            }
+            else {
+                clearInterval(id);
+            }
+        }
+    }
+</script>
+</body>
+</html>

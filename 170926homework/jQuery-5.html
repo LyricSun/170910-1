@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.1.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .outside{
+            position: absolute;
+            width: 400px;
+            height: 40px;
+            top: 45%;
+            left: 37%;
+            background-color: #eeeeee;
+        }
+        .inside{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 0;
+            left: 0;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="outside">
+    <div class="inside">
+
+    </div>
+</div>
+
+<span id="s1"></span>
+<script>
+
+    function get_random_num(A,B) {
+        var num = parseInt(Math.random()*(B - A + 1) + A);
+        return num;
+    }
+
+    function get_random_letter() {
+        var num = get_random_num(65,90);
+        var letter = String.fromCharCode(num);
+        return letter;
+    }
+
+    function get_random_validate(count) {
+        count = Math.abs(count);
+        var str = '';
+        for (var i = 0;i < count;i++){
+            var type = get_random_num(0,1);
+            if (type === 0){
+                str += get_random_letter();
+            }
+            else {
+                str += get_random_num(0,9);
+            }
+        }
+        return str;
+    }
+
+    var content = get_random_validate(4);
+    $('#s1').html(content).click(function () {
+        var newcode = get_random_validate(4);
+        $(this).html(newcode);
+    }) ;
+
+</script>
+
+</body>
+</html>

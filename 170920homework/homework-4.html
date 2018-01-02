@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .mystyle{
+            width: 100%;
+            padding: 25px;
+            background-color: coral;
+            color: white;
+            font-size: 25px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<button onclick="myFunction()">Try</button>
+<div id="myDIV">DIV</div>
+
+<script>
+    function myFunction() {
+        var ele=document.getElementById('myDIV');
+        ele.classList.add('mystyle');
+    }
+</script>
+
+<!--<script>-->
+    <!--function myFunction(){-->
+        <!--var  ele=document.getElementById('myDIV');-->
+        <!--ele.classList.add('mystyle');-->
+    <!--}-->
+<!--</script>-->
+
+<!--<script>-->
+    <!--function myFunction() {-->
+        <!--var ele=document.getElementById('myDIV');-->
+        <!--ele.classList.add('mystyle');-->
+    <!--}-->
+<!--</script>-->
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-image: url("1.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 895px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: solid 1px transparent;
+        }
+        .zhucedenglu{
+            margin: 270px auto;
+            border: solid 1px transparent;
+            width: 60%;
+            position: absolute;
+            left: 400px;
+        }
+        .zcdl{
+            margin: 21px 0;
+            font-family: Helvetica;
+            font-weight: 200;
+            font-size: 32px;
+        }
+        form.zcdl input{
+            width: 637px;
+            height: 30px;
+            font-size: 16px;
+            background-color: transparent;
+        }
+        form.zcdl button{
+            width: 100px;
+            height: 30px;
+            background-color: transparent;
+            font-size: 25px;
+            font-family: Helvetica;
+            font-weight: 200;
+        }
+        form.zcdl button:hover{
+
+        }
+    </style>
+</head>
+<body>
+<div class="zhucedenglu">
+    <form class="zcdl">
+        用户名:<br>
+        <input id="zhuce" type="text" name="username" placeholder="请输入您的用户名"><br><br>
+        密码:<br>
+        <input id="denglu" type="text" name="password" placeholder="请输入您的密码"><br><br><br>
+        <button onclick="yanzheng()">登录</button>
+    </form>
+</div>
+<script>
+    function yanzheng() {
+        var yonghuming = document.getElementById('zhuce').value;
+        var mima = document.getElementById('denglu').value;
+        if (yonghuming === ''||mima==='') {
+            alert('您的用户名或密码未填写')
+        }
+
+        else if (yonghuming === 'hdl') {
+            if (mima === '1234567890') {
+                alert('百度欢迎您');
+                location.href('https://www.baidu.com');
+            }
+            else {
+                alert('密码错误');
+            }
+        }
+        else {
+            alert('用户名错误');
+        }
+    }
+
+</script>
+</body>
+</html>

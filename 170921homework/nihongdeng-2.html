@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .centerblock {
+            /*position: relative;*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .div1 {
+            background-color: purple;
+            width: 350px;
+            height: 350px;
+        }
+
+        .div2 {
+            background-color: blue;
+            width: 300px;
+            height: 300px;
+        }
+
+        .div3 {
+            background-color: cyan;
+            width: 250px;
+            height: 250px;
+        }
+
+        .div4 {
+            background-color: green;
+            width: 200px;
+            height: 200px;
+        }
+
+        .div5 {
+            background-color: yellow;
+            width: 150px;
+            height: 150px;
+        }
+
+        .div6 {
+            background-color: orange;
+            width: 100px;
+            height: 100px;
+        }
+
+        .div7 {
+            background-color: red;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="nihong">
+
+    <div class="centerblock div1">
+        <div class="centerblock div2">
+            <div class="centerblock div3">
+                <div class="centerblock div4">
+                    <div class="centerblock div5">
+                        <div class="centerblock div6">
+                            <div class="centerblock div7">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div>
+
+</div>
+
+
+<script>
+
+    var a = document.getElementsByClassName('div1')[0];
+    var b = document.getElementsByClassName('div2')[0];
+    var c = document.getElementsByClassName('div3')[0];
+    var d = document.getElementsByClassName('div4')[0];
+    var e = document.getElementsByClassName('div5')[0];
+    var f = document.getElementsByClassName('div6')[0];
+    var g = document.getElementsByClassName('div7')[0];
+
+//    var ele_arr = document.getElementsByClassName('centerblock');
+//    var ele_arr2 = document.getElementsByTagName('div');
+
+
+//    var ele = document.getElementById('nihong');
+//    var ele_div = ele.getElementsByTagName('div');
+
+
+    var a_b = window.getComputedStyle(a, null).backgroundColor;
+    var b_b = window.getComputedStyle(b, null).backgroundColor;
+    var c_b = window.getComputedStyle(c, null).backgroundColor;
+    var d_b = window.getComputedStyle(d, null).backgroundColor;
+    var e_b = window.getComputedStyle(e, null).backgroundColor;
+    var f_b = window.getComputedStyle(f, null).backgroundColor;
+    var g_b = window.getComputedStyle(g, null).backgroundColor;
+
+    var nh_ele=[a,b,c,d,e,f,g];
+
+    var nh_arr = [a_b, b_b, c_b, d_b, e_b, f_b, g_b];
+
+//    console.log(a_b, b_b);
+
+//    var i = ele_arr2.length  - 1;
+
+    var i=6;
+    var j=6;
+
+    setInterval(ni_hong, 500);
+
+    function ni_hong() {
+
+        nh_ele[i].style.backgroundColor = nh_arr[i-6];
+        nh_ele[i-1].style.backgroundColor = nh_arr[i];
+        nh_ele[i-2].style.backgroundColor = nh_arr[i-1];
+        nh_ele[i-3].style.backgroundColor = nh_arr[i-2];
+        nh_ele[i-4].style.backgroundColor = nh_arr[i-3];
+        nh_ele[i-5].style.backgroundColor = nh_arr[i-4];
+        nh_ele[i-6].style.backgroundColor = nh_arr[i-5];
+
+        nh_arr[j] =nh_ele[i].style.backgroundColor;
+        nh_arr[j-1] =nh_ele[i-1].style.backgroundColor;
+        nh_arr[j-2] =nh_ele[i-2].style.backgroundColor;
+        nh_arr[j-3] =nh_ele[i-3].style.backgroundColor;
+        nh_arr[j-4] =nh_ele[i-4].style.backgroundColor;
+        nh_arr[j-5] =nh_ele[i-5].style.backgroundColor;
+        nh_arr[j-6] =nh_ele[i-6].style.backgroundColor;
+
+    }
+
+
+
+//    for (var j = 0; j < nh_arr.length; j++) {
+//
+//        ele_arr[j].style.backgroundColor = nh_arr[j];
+//    }
+
+
+</script>
+</body>
+</html>

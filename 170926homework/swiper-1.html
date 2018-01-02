@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
+    <script src="dist/js/swiper.min.js"></script>
+    <script src="jquery-3.2.1.js"></script>
+    <script src="dist/js/swiper.jquery.min.js"></script>
+    <style>
+        .swiper-container{
+            width: 600px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="jd-1.jpg"></div>
+        <div class="swiper-slide"><img src="jd-2.jpg"></div>
+        <div class="swiper-slide"><img src="jd-3.jpg"></div>
+        <div class="swiper-slide"><img src="jd-4.jpg"></div>
+        <div class="swiper-slide"><img src="jd-5.jpg"></div>
+        <div class="swiper-slide"><img src="jd-6.jpg"></div>
+        <div class="swiper-slide"><img src="jd-7.jpg"></div>
+        <div class="swiper-slide"><img src="jd-8.jpg"></div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+</div>
+
+<script>
+
+    var swiper = new Swiper('.swiper-container',{
+        direction : 'horizontal',
+        loop : true,
+        autoplay : '2000',
+        effect : 'flip',
+        pagination : '.swiper-pagination',
+        prevButton : '.swiper-button-prev',
+        nextButton : '.swiper-button-next'
+    });
+
+</script>
+
+</body>
+</html>

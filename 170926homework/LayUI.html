@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.all.js"></script>
+</head>
+<body>
+
+<button id="btn">click</button>
+
+<script>
+    var btn = document.getElementById('btn');
+
+    btn.onclick = function () {
+        layer.open({
+//            type : ,
+            title : 'default',
+            content : '+1',
+            icon : '1',
+//            btn : ['yes','no','dk']
+
+        });
+    }
+
+</script>
+
+</body>
+</html>

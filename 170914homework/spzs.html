@@ -41,7 +41,7 @@
             overflow: hidden;
             height: 40px;
             /*width: 185px;*/
-            white-space: nowrap;
+            /*white-space: nowrap;*/
         }
         div.jianjie a{
             text-decoration: none;
@@ -51,9 +51,12 @@
             color: #ffaa71;
             width: 185px;
             overflow: hidden;
+            height: 20px;
         }
         div.jianjie a div#p1{
             color: #666666;
+            height: 20px;
+            overflow: hidden;
         }
         .jianjie a:hover div#p1{
             color: #c81623;
@@ -79,6 +82,7 @@
             margin-right: 3px;
             font-size: 12px;
             background-color: #e4393c;
+            border-radius: 2px;
             color: white;
             float: left;
         }
@@ -96,26 +100,90 @@
         div.car ul{
             list-style-type: none;
         }
-        div.car ul li a{
+        div.car button{
             display: block;
             float: left;
+            border: solid 1px #dddddd;
+            background-color: white;
+            line-height: 27px;
+            outline: none;
+            margin-left: -1px;
+            position: relative;
+        }
+        div.car button a{
+            display: block;
+            /*text-align: center;*/
+            text-decoration: none;
+            font-size: 12px;
+            color: #999999;
             width: 57px;
             height: 27px;
-            border: solid 1px #dddddd;
-            text-align: center;
-            text-decoration: none;
-            color: #999999;
-            font-size: 12px;
-            line-height: 27px;
         }
-        div.car ul li a:hover{
+        div.car button:hover a{
             color: #e4393c;
+        }
+        div.car button:hover{
             border: solid 1px #e4393c;
+            z-index: 1;
         }
-        div.car li#car a{
+        .sprite1 {
+            background: url('search.ele.png') no-repeat -1px -292px;
+            width: 16px;
+            height: 12px;
+            background-position-x: 3px;
+            padding-left: 18px;
+        }
+        .sprite2 {
+            background: url('search.ele.png') no-repeat -1px -410px;
+            width: 16px;
+            height: 12px;
+            background-position-x: 3px;
+            padding-left: 16px;
+        }
+        .sprite3 {
+            background: url('search.ele.png') no-repeat -1px -268px;
+            width: 16px;
+            height: 12px;
+            background-position-x: 3px;
+            padding-left: 16px;
+        }
+        div.car button#db a.sprite1:hover{
+            background: url('search.ele.png') no-repeat -1px -314px;
+            background-position-x: 3px;
+        }
+        div.car button#gz a.sprite2:hover{
+            background: url('search.ele.png') no-repeat -1px -433px;
+            background-position-x: 3px;
+        }
+        /*div.car button#db a{*/
+            /*padding-left: 20px;*/
+            /*background-image: url("fangxing.png");*/
+            /*background-position: left;*/
+            /*background-size: contain;*/
+            /*background-repeat: no-repeat;*/
+        /*}*/
+        /*div.car button#db a:hover{*/
+            /*background-image: url("hongfx.png");*/
+        /*}*/
+        /*div.car button#gz a{*/
+            /*padding-left: 20px;*/
+            /*background-image: url("xin.png");*/
+            /*background-position: left;*/
+            /*background-size: contain;*/
+            /*background-repeat: no-repeat;*/
+        /*}*/
+        /*div.car button#gz a:hover{*/
+            /*background-image: url("hongxin.png");*/
+        /*}*/
+        div.car button#car a{
             width: 96px;
+            /*padding-left: 20px;*/
+            /*background-image: url("gouwuche.png");*/
+            /*background-position: left;*/
+            /*background-size: contain;*/
+            /*background-repeat: no-repeat;*/
         }
-        li#car a{
+        button#car a{
             color: #e4393c;
         }
     </style>
@@ -123,9 +191,9 @@
 <body>
 <div class="out">
     <div class="image"><a href="#"><img src="juzi.jpg"></a> </div>
-    <div class="jiage"><span>$</span>39.90</div>
+    <div class="jiage"><span>¥</span>39.90</div>
     <div class="jianjie"><a href="#"><div id="p1">优先100新奇士美国进口夏橙 12个装超值优惠hasdbvsdiuvbdsvaj</div><div id="p2">[618销售王牌][天天果园 海外代购]dnvjkdbsvjbsadvjsdvbs</div></a> </div>
-    <div class="pingjia">已有<a href="#">1.9万</a>人评价 </div>
+    <div class="pingjia">已有<a href="#">1.9万+</a>人评价 </div>
     <div class="clear huodong">
         <ul>
             <li>自营</li>
@@ -133,11 +201,9 @@
         </ul>
     </div>
     <div class=" clear car">
-        <ul>
-            <li><a href="#">对比</a></li>
-            <li><a href="#">关注</a></li>
-            <li id="car"><a href="#">加入购物车</a></li>
-        </ul>
+        <button id="db"><a class="sprite1" href="#">对比</a></button>
+        <button id="gz"><a class="sprite2" href="#">关注</a></button>
+        <button id="car"><a class="sprite3" href="#">加入购物车</a></button>
     </div>
 </div>
 </body>

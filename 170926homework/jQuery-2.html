@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.1.js"></script>
+    <style>
+        .common{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: salmon;
+        }
+    </style>
+</head>
+<body>
+
+<div class="common">
+
+</div>
+
+<form action="">
+    <label for="">用户名:</label>
+    <input type="text" name="username">
+    <label for="">密码:</label>
+    <input type="text" name="password">
+</form>
+
+<script>
+
+    $('input').focus(function () {
+        $(this).css({
+           backgroundColor : '#f9f9f9'
+        });
+    }).blur(function () {
+        $(this).css({
+            backgroundColor : '#fff'
+        });
+    });
+
+        $('.common').animate({
+            left : '1000px',
+            transform : 'rotateY(30deg)'
+        },2000,function () {
+           $(this).html('END');
+        });
+
+</script>
+
+</body>
+</html>

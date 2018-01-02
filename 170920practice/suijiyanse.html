@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            /*border: solid 1px black;*/
+        }
+    </style>
+</head>
+<body >
+<div id="change"></div>
+
+<script>
+    function get_random_number(a,b) {
+        var num=parseInt(Math.random()*(b-a+1)+a);
+        return num;
+    }
+    function ger_random_color() {
+        var r=get_random_number(0,255);
+        var g=get_random_number(0,255);
+        var b=get_random_number(0,255);
+        return 'rgb('+r+','+g+','+b+')';
+    }
+    function change_color() {
+        var bianse=document.getElementById('change');
+        bianse.style.backgroundColor=ger_random_color();
+    }
+    var timer=setInterval(change_color,200);
+</script>
+</body>
+</html>

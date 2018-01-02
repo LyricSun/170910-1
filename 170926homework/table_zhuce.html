@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.all.js"></script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        table{
+            width: 470px;
+            height: 730px;
+            border: 1px solid #e9e9e9;
+            margin: 50px auto;
+        }
+        input{
+            height: 37px;
+            border: solid 1px #cccccc;
+            border-radius: 5px;
+            color: #555555;
+            font-size: 16px;
+        }
+        input:hover{
+            border-color: #999;
+        }
+        .leftfont{
+            width: 30%;
+            font-size: 16px;
+            text-align: right;
+            padding-top: 0.1%;
+            padding-right: 20px;
+            color: #666;
+        }
+        td.leftfont span{
+            color: #de080d;
+            font-size: 20px;
+        }
+        td.yx span{
+            color: #777777;
+        }
+        .youxiang{
+            width: 50%;
+        }
+        .mima{
+            width: 80%;
+        }
+        .qrmima{
+            width: 80%;
+        }
+        span#s1{
+            color: #007DDB;
+            font-family: Menlo;
+            display: inline-block;
+            font-size: 21px;
+            margin-left: 20px;
+        }
+        span#s1:hover{
+            cursor: pointer;
+        }
+        td.btn button{
+            width: 40%;
+            height: 57px;
+            border: solid 1px #cccccc;
+            background-color: mediumseagreen;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+
+    <table>
+        <tr>
+            <td class="leftfont"><span>*</span>&nbsp;用户名</td>
+            <td class="yx">
+                <input class="youxiang" type="text">
+                <span>@</span>
+                <select>
+                    <option>163.com</option>
+                    <option>126.com</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="leftfont"><span>*</span>&nbsp;密码</td>
+            <td class="mm">
+                <input class="mima" type="password">
+            </td>
+        </tr>
+        <tr>
+            <td class="leftfont"><span>*</span>&nbsp;确认密码</td>
+            <td class="qrmm">
+                <input class="qrmima" type="password">
+            </td>
+        </tr>
+        <tr>
+            <td class="leftfont"><span>*</span>&nbsp;性别</td>
+            <td>
+                <input type="radio" name="sex">男&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="sex">女
+            </td>
+        </tr>
+        <tr>
+            <td class="leftfont"><span>*</span>&nbsp;验证码</td>
+            <td class="yzm"><input class="yanzheng" type="text"><span id="s1"></span></td>
+        </tr>
+        <tr>
+            <td class="leftfont"><input type="checkbox"></td>
+            <td><a href="#">阅读并同意用户注册协议</a></td>
+        </tr>
+        <tr>
+            <td class=""></td>
+            <td class="btn"><button type="submit">注&nbsp;&nbsp;&nbsp;&nbsp;册</button></td>
+        </tr>
+    </table>
+
+</form>
+
+<script>
+
+    function get_random_num(A,B) {
+        var num = parseInt(Math.random()*(B - A + 1) + A);
+        return num;
+    }
+
+    function ger_random_color() {
+        var r=get_random_num(0,255);
+        var g=get_random_num(0,255);
+        var b=get_random_num(0,255);
+        return 'rgb('+r+','+g+','+b+')';
+    }
+
+    function get_random_letter() {
+        var num = get_random_num(65,90);
+        var letter = String.fromCharCode(num);
+        return letter;
+    }
+
+    function get_random_validate(count) {
+        count = Math.abs(count);
+        var str = '';
+        for (var i = 0;i < count;i++){
+            var type = get_random_num(0,1);
+            if (type === 0){
+                str += get_random_letter();
+            }
+            else {
+                str += get_random_num(0,9);
+            }
+        }
+        return str;
+    }
+
+    var content = get_random_validate(4);
+    $('#s1').html(content).click(function () {
+        var yzm = get_random_validate(4);
+        $(this).html(yzm);
+    }) ;
+
+
+    $('.youxiang').focus(function () {
+        $(this).css({
+            borderColor: '#6495ED'
+        });
+    });
+    $('.youxiang').blur(function () {
+        if ($(this).val() === ''){
+            $(this).css({
+                borderColor: '#ccc'
+            });
+        }
+        else if ($(this).val().length < 4 || $(this).val().length > 10){
+            $(this).css({
+                borderColor: '#DE2F2B'
+            });
+            layer.open({
+                title : '提示',
+                content : '邮箱长度应为4~10个字符',
+                icon : '2'
+            });
+        }
+        else {
+            $(this).css({
+                borderColor: '#3CB371'
+            });
+//            layer.open({
+//                title : '提示',
+//                content : '此邮箱可用',
+//                icon : '1'
+//            });
+        }
+    });
+
+
+    $('.mima').focus(function () {
+        $(this).css({
+            borderColor: '#6495ED'
+        });
+    });
+    $('.mima').blur(function () {
+        if ($(this).val() === ''){
+            $(this).css({
+                borderColor: '#ccc'
+            });
+        }
+        else if ($(this).val().length < 6 || $(this).val().length > 12){
+            $(this).css({
+                borderColor: '#DE2F2B'
+            });
+            layer.open({
+                title : '提示',
+                content : '密码长度应为6~12个字符',
+                icon : '2'
+            });
+        }
+        else {
+            $(this).css({
+                borderColor: '#3CB371'
+            });
+//            layer.open({
+//                title : '提示',
+//                content : '密码符合要求',
+//                icon : '1'
+//            });
+        }
+    });
+
+
+    $('.qrmima').focus(function () {
+        $(this).css({
+            borderColor: '#6495ED'
+        });
+    });
+    $('.qrmima').blur(function () {
+        if ($(this).val() === ''){
+            $(this).css({
+                borderColor: '#ccc'
+            });
+        }
+        else if ($(this).val() !== $('td.mm input').val()){
+            $(this).css({
+                borderColor: '#DE2F2B'
+            });
+            layer.open({
+                title : '提示',
+                content : '密码不一致',
+                icon : '2'
+            });
+        }
+        else {
+            $(this).css({
+                borderColor: '#3CB371'
+            });
+//            layer.open({
+//                title : '提示',
+//                content : '密码一致',
+//                icon : '1'
+//            });
+        }
+    });
+
+
+    $('.yanzheng').focus(function () {
+        $(this).css({
+            borderColor: '#6495ED'
+        });
+    });
+    $('.yanzheng').blur(function () {
+        if ($(this).val() === ''){
+            $(this).css({
+                borderColor: '#ccc'
+            });
+        }
+        else if ($(this).val() !== $('#s1').html()){
+            $(this).css({
+                borderColor: '#DE2F2B'
+            });
+        }
+        else {
+            $(this).css({
+                borderColor: '#3CB371'
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

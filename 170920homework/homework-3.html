@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #myDIV{
+            width: 100%;
+            padding: 50px 0;
+            text-align: center;
+            background-color: lightblue;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<button onclick="myFunction()">Try</button>
+<div id="myDIV">DIV</div>
+
+<script>
+    function myFunction() {
+        var x=document.getElementById('myDIV');
+        if(x.style.display==='none')
+        {
+            x.style.display='block';
+        }
+        else{
+            x.style.display='none';
+        }
+    }
+</script>
+
+<!--<script>-->
+    <!--function myFunction() {-->
+        <!--var x=display.getElementById('myDIV');-->
+        <!--if (x.style.display==='none'){-->
+            <!--x.style.display='block';-->
+        <!--}-->
+        <!--else {-->
+            <!--x.style.display='none';-->
+        <!--}-->
+    <!--}-->
+<!--</script>-->
+
+<!--<script>-->
+    <!--function myFunction() {-->
+        <!--var x=document.getElementById('myDIV');-->
+        <!--if (x.style.display==='none'){-->
+            <!--x.style.display='block';-->
+        <!--}-->
+        <!--else {-->
+            <!--x.style.display='none';-->
+        <!--}-->
+    <!--}-->
+<!--</script>-->
+</body>
+</html>

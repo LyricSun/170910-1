@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        div{
+            border: solid 1px black;
+            width: 200px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<input id="ping_jun1" type="text" >
+<input id="ping_jun2" type="text" >
+<input id="ping_jun3" type="text" >
+<button id="pj" onclick="avg()">提交</button>
+<h2>结果为:</h2>
+<p id="jie_guo"></p>
+<script>
+    function avg() {
+        var a = parseInt(document.getElementById('ping_jun1').value) ;
+        var b = parseInt(document.getElementById('ping_jun2').value);
+        var c = parseInt(document.getElementById('ping_jun3').value);
+        var z = (a + b + c) / 3;
+        var jg = document.getElementById('jie_guo');
+        jg.innerHTML = z;
+    }
+
+</script>
+</body>
+</html>
